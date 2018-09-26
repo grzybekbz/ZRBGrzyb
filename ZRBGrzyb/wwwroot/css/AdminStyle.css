@@ -1,0 +1,32 @@
+﻿.admin {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    margin-top: 50px;
+}
+
+.btn-space {
+    margin-right: 5px;
+}
+
+#buttons {
+    margin-top: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+p span {
+    font-weight: bold;
+}
+
+.editThumb {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0 20px 0;
+}

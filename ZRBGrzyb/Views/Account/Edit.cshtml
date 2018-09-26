@@ -1,0 +1,27 @@
+﻿@model AppUser
+
+@{
+    ViewBag.Title = "Edytuj zdjęcie";
+    Layout = "_AdminLayout";
+}
+
+<div class="admin">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="PhoneNumber">Telefon</label>
+            <input asp-for="PhoneNumber" class="form-control" />
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary" type="submit">Zapisz</button>
+            <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
+        </div>
+    </form>
+</div>

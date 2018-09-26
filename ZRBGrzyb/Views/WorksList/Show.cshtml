@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Work>
+
+<section id="frame"></section>
+
+<section id="content">
+    <div class="container">
+
+        <nav>
+            <div class="heading">Kategoria</div>
+            @await Component.InvokeAsync("GalleryCategoryMenu")
+        </nav>
+
+        <div id="gallery">
+            <table align="center">
+                <tr>
+                    <th>Data</th>
+                    <th>Typ robót</th>
+                    <th>Wartość</th>
+                    <th>Miejsce</th>
+                    <th>Podmiot</th>
+                </tr>
+                @foreach (var item in Model) {
+                    <tr>
+                        <td>
+                            @item.Date.ToString("MMMM, yyyy")
+                        </td>
+                        <td>
+                            @item.Type
+                        </td>
+                        <td>
+                            @item.Value
+                        </td>
+                        <td>
+                            @item.Place
+                        </td>
+                        <td>
+                            @item.Subject
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+</section>

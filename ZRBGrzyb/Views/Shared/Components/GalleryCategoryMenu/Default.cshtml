@@ -1,0 +1,22 @@
+@model IEnumerable<Category>
+
+<ul>
+    <!--<li>
+        <a class="(ViewBag.Selected == "WorksList" ? "selected" : "normal")"
+           asp-action="Show"
+           asp-controller="WorksList">
+            Wykaz rob&#243;t
+        </a>
+    </li>-->
+    @foreach (Category category in Model) {
+        <li>
+            <a class="@(category.RouteName == ViewBag.SelectedCategory ? "selected" : "normal")"
+               asp-action="Gallery"
+               asp-controller="Photo"
+               asp-route-category="@category.RouteName"
+               asp-route-photoPage="1">
+                @category.Name
+            </a>
+        </li>
+    }
+</ul>

@@ -1,0 +1,22 @@
+﻿@model Category
+
+@{
+    ViewData["Title"] = "Edytuj kategorię";
+
+    Layout = "_AdminLayout";
+}
+
+<div class="admin">
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="CategoryID" />
+        <div class="form-group">
+            <label asp-for="Name">Nazwa kategorii</label>
+            <div><span asp-validation-for="Name" class="text-danger" ></span></div>
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary" type="submit">Zapisz</button>
+            <a asp-action="Index" class="btn btn-secondary">Anuluj</a>
+        </div>
+    </form>
+</div>

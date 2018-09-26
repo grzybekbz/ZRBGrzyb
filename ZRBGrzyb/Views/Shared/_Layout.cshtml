@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Zakład Remontowo-Budowlany Artur Grzyb">
+    <meta name="keywords" content="docieplenia, usługi budowlane, remont, zakład artur grzyb">
+    <meta name="author" content="Tomasz Grzyb">
+    <title>ZRB Artur Grzyb</title>
+    <link rel="stylesheet" href="~/css/Style.css">
+    <link rel="stylesheet" href="~/lib/simpleLightbox/simpleLightbox.min.css" />
+    <script src="~/lib/jQuery/dist/jquery.min.js"></script>
+    <script src="~/lib/simpleLightbox/simpleLightbox.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="contact">
+            @await Component.InvokeAsync("ContactMenu")
+        </div>
+        <div class="container">
+            <div id="branding">
+                <img src="~/img/logo2.png" alt="logo" />
+            </div>
+            <nav>
+                @await Component.InvokeAsync("NavigationMenu")
+            </nav>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer>
+        <p>ZRBGrzyb.pl &copy; 2018</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿<section id="showcase">
+    <div class="container">
+        <h1>Profesjonalne usługi budowlane i termoizolacyjne</h1>
+        <p>Sprawnie prosperujemy od kilkunastu lat w branży budowlanej specjalizując się w dociepleniach. Możemy pochwalić się ogromnym doświadczeniem i zasobem wiedzy w zakresie wykonywanym przez nas robót.</p>
+    </div>
+</section>
+
+<section id="frame"></section>
+
+<section id="content">
+    <div class="container">
+        <a asp-controller="Photo" asp-action="Gallery" asp-route-category="Galeria">
+            <div class="realizations">
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <h3>Realizacje</h3>
+                <p>Zachęcamy do zapoznania się ze zdjęciami wykonanych przez nas inwestycji</p>
+            </div>
+        </a>
+
+        <a asp-controller="Photo" asp-action="Gallery" asp-route-category="Referencje">
+            <div class="references">
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <h3>Referencje</h3>
+                <p>Poświadczenia wydane przez inwestorów potwierdzające skrupulatnie i całościowo wykonanych prac</p>
+            </div>
+        </a>
+
+        <a asp-controller="Photo" asp-action="Gallery" asp-route-category="Certyfikaty">
+            <div class="certificates">
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <h3>Certyfikaty</h3>
+                <p>Dokumenty stwierdzające wykorzystanie materiałów różnych producentów zgodnie ze sztuką budowlaną</p>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+
+        function resizeFunc() {
+            var height = Math.max($(".realizations").height(), $(".references").height(), $(".certificates").height());
+            $(".realizations").height(height);
+            $(".references").height(height);
+            $(".certificates").height(height);
+        };
+
+        $(document).ready(function () {
+            resizeFunc();
+        });
+
+    </script>
+</section>

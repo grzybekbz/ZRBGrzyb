@@ -1,0 +1,75 @@
+@model PhotosGalleryViewModel
+
+<section id="frame"></section>
+
+<section id="content">
+    <div class="container">
+
+        <nav>
+            <div class="side">Kategoria</div>
+            @await Component.InvokeAsync("GalleryCategoryMenu")
+        </nav>
+
+        <div id="gallery">
+            <div id="left">
+            @{
+                int ctr = 0;
+                foreach (var p in Model.Photos) {
+                    if (ctr % 2 == 0) {
+                        <div class="imageGallery1 photo">
+                            <a href="@Url.Content(ViewBag.PhotosViewDirectory + "/" + p.FileName)" title="@p.Description">
+                                <img src="@Url.Content(ViewBag.PhotosViewDirectory + "/thumbs/" + p.FileName)" alt="@p.FileName" />
+                            </a>
+                            <p>@p.Description</p>
+                        </div>
+                        <br />
+                    }
+                    ++ctr;
+                }
+            }
+            </div>
+            <div id="right">
+            @{
+                ctr = 0;
+                foreach (var p in Model.Photos) {
+                    if (ctr % 2 != 0) {
+                        <div class="photo">
+                            <div class="imageGallery1">
+                                <a href="@Url.Content(ViewBag.PhotosViewDirectory + "/" + p.FileName)" title="@p.Description">
+                                    <img src="@Url.Content(ViewBag.PhotosViewDirectory + "/thumbs/" + p.FileName)" alt="@p.FileName" />
+                                </a>
+                                <p>@p.Description</p>
+                            </div>
+                        </div>
+                        <br />
+                    }
+                    ++ctr;
+                }
+            }
+            </div>
+            <script type="text/javascript">
+                new SimpleLightbox({ elements: '.imageGallery1 a' });
+
+                var $items = $('.imageGallery1 a');
+
+                $items.on('click', function (e) {
+                    resourceLoader.makeSureIsLoaded('$.SimpleLightbox', function () {
+                        SimpleLightbox.open({
+                            $items: $items,
+                            startAt: $items.index($(e.target)),
+                            bindToItems: false
+                        });
+                    });
+                });
+            </script>
+        </div>
+    </div>
+    <div id="pagination">
+        <span>Strona</span><br /><br />
+        <div page-model="@Model.PagingInfo" page-action="Gallery"
+             page-classes-enabled="true"
+             page-class-normal="pagenormal"
+             page-class-selected="pageselected"
+             page-url-category="@Model.CurrentCategory"></div>
+    </div>
+</section>

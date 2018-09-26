@@ -1,0 +1,20 @@
+﻿@model AppUser
+
+@{
+    ViewData["Title"] = "Profil użytkownika";
+
+    Layout = "_AdminLayout";
+}
+
+<div class="text-center m-4">
+    <a asp-action="Index" asp-controller="Admin" class="btn btn-secondary">Powrót</a>
+</div>
+
+<p>Nazwa użytkownika: <span>@Model.UserName</span></p>
+<p>Email: <span>@Model.Email</span></p>
+<p>Telefon: <span>@Model.PhoneNumber</span></p>
+
+<div class="text-center">
+    <a asp-action="Edit" asp-route-userId="@Model.Id" class="btn btn-primary">Edytuj dane</a>
+    <a asp-action="ChangePassword" asp-route-userId="@Model.Id" class="btn btn-primary">Zmień hasło</a>
+</div>

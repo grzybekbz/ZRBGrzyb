@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Panel administracyjny";
+
+    Layout = "_AdminLayout";
+}
+
+<table align="center" id="buttons">
+    <tr>
+        <td>
+            <form asp-action="Index" asp-controller="Category" method="post">
+                <button type="submit" class="btn btn-space btn-success">Kategorie</button>
+            </form>
+        </td>
+        <td>
+            <form asp-action="Index" asp-controller="Account" method="post">
+                <button type="submit" class="btn btn-space btn-success">Profil użytkownika</button>
+            </form>
+        </td>
+        <td>
+            <form asp-action="Index" asp-controller="Photo" method="post">
+                <button type="submit" class="btn btn-space btn-success">Galeria</button>
+            </form>
+        </td>
+        <td>
+            <form asp-action="Index" asp-controller="WorksList" method="post">
+                <button type="submit" class="btn btn-space btn-success">Wykaz robót</button>
+            </form>
+        </td>
+        <td>
+            <form asp-action="SeedDatabase" method="post">
+                <button type="submit" class="btn btn-space btn-danger">Inicjuj baze danych</button>
+            </form>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,403 @@
+html {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    font: 18px Signika, Arial, Helvetica;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+                                        /* globalne */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+                                        /* nag³ówek */
+header {
+    background: #414141;
+    color: #ffffff;
+    min-height: 70px;
+    border-bottom: #19B5FE 3px solid;
+}
+
+header #contact {
+    background: #242424;
+    padding: 5px 10% 5px 10%;
+    text-align: right;
+    font-size: 14px;
+}
+
+header #contact a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header li {
+    float: left;
+    padding: 30px 10px 40px 15px;
+    color: #ffffff;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+header #branding {
+    float: left;
+    width: 430px;
+}
+
+header #branding img {
+     max-width: 100%;
+     max-height: 100px;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header nav a {
+    text-decoration: none;
+}
+
+header .current {
+    margin-right: 5px;
+    color: #19B5FE;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+header .other {
+    color: #ffffff;
+}
+
+header .other:hover {
+    text-shadow: 0 0 2px #f4f4f4;
+}
+
+                                        /* logo */
+#showcase {
+    min-height: 250px;
+    background:url("../img/logo.jpg") no-repeat -10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#showcase h1 {
+    margin-top: 60px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase p {
+    font-size: 20px;
+    padding: 0 10% 0 10%;
+}
+
+#frame {
+    min-height: 30px;
+    background: #414141;
+}
+
+                                        /* kontent */
+#content {
+    margin-top: 20px;
+    padding-bottom: 120px;
+}
+
+#content .offerleft {
+    width: 60%;
+    float: left;
+}
+
+#content .offerright {
+    width: 40%;
+    float: right;
+    text-align:center;
+    padding: 50px 0 0 0;
+}
+
+#content .offerright img{
+    max-width: 100%;
+}
+
+#content .offerbottom {
+    margin-top: 80px;
+    text-align: center;
+}
+
+#content .offerbottom img {
+    max-height: 120px;
+    margin: 0 10px 0 10px;
+}
+
+#content .realizations,
+#content .references,
+#content .certificates {
+    float: left;
+    text-align: center;
+    width: 28.5%;
+    padding: 10px;
+    margin: 10px 0 0 20px;
+    color: #000000;
+    transition: 0.3s;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom: #19B5FE 3px solid;
+}
+
+#content .realizations {
+    background-image: url(../img/building.png);
+}
+
+#content .realizations:hover {
+    background-image: url(../img/building2.png);
+}
+
+#content .references {
+    background-image: url(../img/reference.png);
+}
+
+#content .references:hover {
+    background-image: url(../img/reference2.png);
+}
+
+#content .certificates {
+    background-image: url(../img/certificate.png);
+}
+
+#content .certificates:hover {
+    background-image: url(../img/certificate2.png);
+}
+
+#content .container li {
+    margin-left: 40px;
+}
+
+                                        /* galeria */
+#content .side {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 28px;
+}
+
+#content nav {
+    float: left;
+    margin-bottom: 40px;
+    width: 15%;
+    min-width: 200px;
+}
+
+#content nav li {
+    padding-bottom: 5px;
+    list-style: none;
+}
+
+#content nav li a {
+    color: #242424;
+    text-decoration: none;
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+#content nav li .normal {
+    transition: 0.5s;
+}
+
+#content nav li .normal:hover {
+    padding-left: 10px;
+}
+
+#content nav li .selected {
+    color: #19B5FE;
+    pointer-events: none;
+}
+
+#content #gallery {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: 77%;
+}
+
+#content #gallery #left {
+    float: left;
+    width: 49%;
+    margin-right: 1%;
+}
+
+#content #gallery #right {
+    float: right;
+    width: 49%;
+}
+
+#content #gallery .photo {
+    padding: 10px 5px 5px 5px;
+    text-align: center;
+    background: #eeeeee;
+}
+
+#content #gallery img {
+    max-width: 100%;
+    max-height: 400px;
+    box-shadow: 0 0 3px 0 #000000;
+    transition: 0.3s;
+}
+
+#content #gallery img:hover {
+    box-shadow: 0 0 7px 0 #000000;
+    cursor: pointer;
+}
+
+#content #pagination {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#content #pagination span {
+    color: #242424;
+    text-align: center;
+    font-size: 20px;
+    font-family: Philosopher;
+}
+
+#content #pagination .pagenormal {
+    padding: 10px;
+    text-decoration: none;
+    color: #242424;
+    font-size: 24px;
+    font-family: Philosopher;
+    transition: 0.3s;
+}
+
+#content #pagination .pagenormal:hover {
+    text-shadow: 0 0 1px #414141;
+}
+
+#content #pagination .pageselected {
+    padding: 10px;
+    text-decoration: none;
+    color: #19B5FE;
+    font-size: 24px;
+    font-family: Philosopher;
+    pointer-events: none;
+}
+
+                                        /* stopka */
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #ffffff;
+    background-color: #19B5FE;
+    text-align: center;
+}
+                                        /* mobilne */
+@media (max-width:1150px) {
+
+    #content .realizations,
+    #content .references,
+    #content .certificates {
+        margin: 10px 0 10px 5px;
+    }
+
+    #content nav {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+
+    header #branding,
+    header nav,
+    header nav li,
+    #content .realizations,
+    #content .references,
+    #content .certificates {
+        float: none;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #content .offerleft {
+        width: 100%;
+        float: none;
+    }
+
+    #content .offerright {
+        width: 100%;
+        float: none;
+    }
+
+    #content .offerbottom img {
+        max-height: 100px;
+    }
+
+    header li {
+        padding: 30px 0 30px 0;
+    }
+
+    header #contact {
+        font-size:10px;
+    }
+
+    header li {
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+
+    #showcase h1 {
+        font-size: 28px;
+    }
+
+    #showcase p {
+        font-size: 18px;
+        padding: 0;
+    }
+
+    #content .container li {
+        margin-left: 0px;
+    }
+
+    #content #gallery {
+        width: 100%;
+    }
+
+    #content #gallery #left {
+        float: none;
+        width: 100%;
+    }
+
+    #content #gallery #right {
+        float: none;
+        width: 100%;
+    }
+
+    #content #gallery .photo {
+        padding: 10px 0 5px 0;
+    }
+
+    #content #gallery img {
+        max-width: 97%;
+    }
+}

@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Button>
+
+<ul>
+    @foreach (Button button in Model)
+    {
+
+    <li>
+        @if ((button.Controller + button.Action) != "PhotoGallery") {
+            <a asp-controller="@button.Controller" asp-action="@button.Action"
+                class="@((button.Controller + button.Action) == ViewBag.CurrentPage ? "current" : "other")">
+                @button.Label
+            </a>
+         }
+         else {
+            <a asp-controller="@button.Controller" asp-action="@button.Action"
+                class="@((button.Controller + button.Action) == ViewBag.CurrentPage ? "current" : "other")"
+                 asp-route-category="Galeria">
+                @button.Label
+            </a>
+         }
+    </li>
+    }
+</ul>
