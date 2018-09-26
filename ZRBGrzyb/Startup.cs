@@ -47,9 +47,9 @@ namespace ZRBGrzyb {
 
             services.AddTransient<IRepository, EFRepository>();
             services.AddSession();
-            services.AddMvc(/*options => {
+            services.AddMvc(options => {
                 options.Filters.Add(new RequireHttpsAttribute());
-            }*/);
+            });
             services.AddMemoryCache();
         }
 
