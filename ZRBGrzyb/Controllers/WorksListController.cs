@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using ZRBGrzyb.Models;
 
 namespace ZRBGrzyb.Controllers {
 
+    [Authorize]
     public class WorksListController : Controller {
 
         private IRepository repository;
@@ -13,6 +15,7 @@ namespace ZRBGrzyb.Controllers {
             repository = repo;
         }
 
+        [AllowAnonymous]
         public ViewResult Show() {
 
             ViewBag.CurrentPage = "WorksListShow";

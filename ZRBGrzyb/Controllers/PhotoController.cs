@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.FileProviders;
@@ -12,6 +13,7 @@ using ZRBGrzyb.Infrastructure;
 
 namespace ZRBGrzyb.Controllers {
 
+    [Authorize]
     public class PhotoController : Controller {
 
         private IRepository repository;
@@ -37,6 +39,7 @@ namespace ZRBGrzyb.Controllers {
             PageSize = Int32.Parse(config["Data:Grzyb:GalleryPageSize"]);
         }
 
+        [AllowAnonymous]
         public ViewResult Gallery(string category, int photoPage = 1) {
 
             ViewBag.CurrentPage = "PhotoGallery";
