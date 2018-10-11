@@ -116,12 +116,12 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     word-wrap: normal;
-    font-size: 1.4em;
+    font-size: 1.2em;
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    padding: .5em 0;
+    padding: .4em 0;
     color: #fff;
     color: rgba(255,255,255,0.7);
     text-align: center
@@ -155,7 +155,7 @@
     font-size: 3em;
     width: 1em;
     height: 1em;
-    line-height: 1em;
+    line-height: 0.3em;
     position: absolute;
     right: -.33333em;
     top: 0;

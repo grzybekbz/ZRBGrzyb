@@ -30,8 +30,8 @@ namespace ZRBGrzyb.Infrastructure {
                     height = Convert.ToInt32(image.Height * size / (double)image.Width);
                 } else {
 
-                    width = Convert.ToInt32(image.Width * (size - 100) / (double)image.Height);
-                    height = size - 100;
+                    width = Convert.ToInt32(image.Width * (size - 200) / (double)image.Height);
+                    height = size - 200;
                 }
                 var resized = new Bitmap(width, height);
                 using (var graphics = Graphics.FromImage(resized)) {
